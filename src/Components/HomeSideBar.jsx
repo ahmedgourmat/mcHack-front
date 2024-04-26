@@ -8,6 +8,7 @@ import Vector3 from "../assets/Vector3.png"
 import Vector4 from "../assets/Vector4.png"
 import Vector5 from "../assets/Vector5.png"
 import money from "../assets/money.png"
+import CardBox from "./CardBox"
 import {
   Box,
   Button,
@@ -64,11 +65,24 @@ const HomeSideBar = () => {
               <Box>Show client</Box>
             </Box>
           </Button>
-          <Accordion defaultIndex={[0]} allowMultiple width="220px" height="50px" my="3">
+          <Accordion
+            defaultIndex={[0]}
+            allowMultiple
+            width="220px"
+            height="50px"
+            my="3"
+          >
             <AccordionItem>
               <h2>
                 <AccordionButton>
-                  <Box as="span" flex="1" textAlign="left" display="flex" alignItems="center" height="30px">
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    display="flex"
+                    alignItems="center"
+                    height="30px"
+                  >
                     <Box mx="2">
                       <img src={money} />
                     </Box>
