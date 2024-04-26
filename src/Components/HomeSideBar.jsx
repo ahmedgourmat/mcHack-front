@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import logoblue from "../assets/logoblue.png";
-import home from "../assets/home.png";
-import Vector from "../assets/Vector.png";
-import Vector1 from "../assets/Vector1.png";
-import Vector2 from "../assets/Vector2.png";
-import Vector3 from "../assets/Vector3.png";
-import Vector4 from "../assets/Vector4.png";
-import Vector5 from "../assets/Vector5.png";
-import money from "../assets/money.png";
+import React from "react"
+import Logo from "../assets/logo.png"
+import home from "../assets/home.png"
+import Vector from "../assets/Vector.png"
+import Vector1 from "../assets/Vector1.png"
+import Vector2 from "../assets/Vector2.png"
+import Vector3 from "../assets/Vector3.png"
+import Vector4 from "../assets/Vector4.png"
+import Vector5 from "../assets/Vector5.png"
+import money from "../assets/money.png"
 import {
   Box,
   Button,
@@ -62,34 +62,45 @@ const HomeSideBar = () => {
           flexDirection="column"
           mx="8"
         >
-          {firstFourButtons.map((button) => (
-            <Button
-              key={button.name}
-              bgColor={activeButton === button.name ? "#E6E6E6" : "#F6F6F6"}
-              color='black'
-              width="220px"
-              height="50px"
-              my="3"
-              display="flex"
-              alignItems="center"
-              justifyContent="flex-start"
-              onClick={() => handleButtonClick(button.name)}
-            >
-              <Box display="flex" alignItems="center">
-                <Box mr="2">
-                  <img src={button.icon} alt={button.name} />
-                </Box>
-                <Box>{button.name}</Box>
+          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+            <Box display="flex" alignItems="center">
+              <Box mx="2">
+                <img src={home} />
               </Box>
-            </Button>
-          ))}
-          <Accordion zIndex='9999'  allowMultiple width="220px" height="50px" my="3">
-            <AccordionItem bg='white'>
+              <Box>Home</Box>
+            </Box>
+          </Button>
+          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+            <Box display="flex" alignItems="center">
+              <Box mx="2">
+                <img src={Vector} />
+              </Box>
+              <Box>Schedules</Box>
+            </Box>
+          </Button>
+          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+            <Box display="flex" alignItems="center">
+              <Box mx="2">
+                <img src={Vector1} />
+              </Box>
+              <Box>My docs</Box>
+            </Box>
+          </Button>
+          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+            <Box display="flex" alignItems="center">
+              <Box mx="2">
+                <img src={Vector2} />
+              </Box>
+              <Box>Show client</Box>
+            </Box>
+          </Button>
+          <Accordion defaultIndex={[0]} allowMultiple width="220px" height="50px" my="3">
+            <AccordionItem>
               <h2>
                 <AccordionButton>
                   <Box as="span" flex="1" textAlign="left" display="flex" alignItems="center" height="30px">
-                    <Box mr="2">
-                      <img src={money} alt="Sessions" />
+                    <Box mx="2">
+                      <img src={money} />
                     </Box>
                     <Box>Sessions</Box>
                   </Box>
