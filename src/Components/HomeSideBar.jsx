@@ -22,105 +22,114 @@ import {
 const HomeSideBar = () => {
   return (
     <div>
-      <Box my="5" mx="16">
-        <img src={Logo} />
-      </Box>
-      <Box display="grid" gridGap={32}>
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="space-between"
-          flexDirection="column"
-          mx="8"
-        >
-          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
-            <Box display="flex" alignItems="center">
-              <Box mx="2">
-                <img src={home} />
-              </Box>
-              <Box>Home</Box>
-            </Box>
-          </Button>
-          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
-            <Box display="flex" alignItems="center">
-              <Box mx="2">
-                <img src={Vector} />
-              </Box>
-              <Box>Schedules</Box>
-            </Box>
-          </Button>
-          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
-            <Box display="flex" alignItems="center">
-              <Box mx="2">
-                <img src={Vector1} />
-              </Box>
-              <Box>My docs</Box>
-            </Box>
-          </Button>
-          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
-            <Box display="flex" alignItems="center">
-              <Box mx="2">
-                <img src={Vector2} />
-              </Box>
-              <Box>Show client</Box>
-            </Box>
-          </Button>
-          <Accordion
-            defaultIndex={[0]}
-            allowMultiple
-            width="220px"
-            height="50px"
-            my="3"
-          >
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box
-                    as="span"
-                    flex="1"
-                    textAlign="left"
-                    display="flex"
-                    alignItems="center"
-                    height="30px"
-                  >
-                    <Box mx="2">
-                      <img src={money} />
-                    </Box>
-                    <Box>Sessions</Box>
-                  </Box>
-
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>Session 1</AccordionPanel>
-            </AccordionItem>
-          </Accordion>
+      <Box display="flex">
+        <Box my="5" mx="16">
+          <img src={Logo} />
         </Box>
-        <Box display="flex" flexDirection="column" alignItems="center">
-          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
-            <Box display="flex" alignItems="center">
-              <Box mx="2">
-                <img src={Vector3} />
+        <Box display="grid" gridGap={32}>
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+            flexDirection="column"
+            mx="8"
+          >
+            <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+              <Box display="flex" alignItems="center">
+                <Box mx="2">
+                  <img src={home} />
+                </Box>
+                <Box>Home</Box>
               </Box>
-              <Box>Notifications</Box>
-            </Box>
-          </Button>
-          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
-            <Box display="flex" alignItems="center">
-              <Box mx="2">
-                <img src={Vector4} />
+            </Button>
+            <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+              <Box display="flex" alignItems="center">
+                <Box mx="2">
+                  <img src={Vector} />
+                </Box>
+                <Box>Schedules</Box>
               </Box>
-              <Box>Settings</Box>
-            </Box>
-          </Button>
-          <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
-            <Box display="flex" alignItems="center">
-              <Box mx="2">
-                <img src={Vector5} />
+            </Button>
+            <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+              <Box display="flex" alignItems="center">
+                <Box mx="2">
+                  <img src={Vector1} />
+                </Box>
+                <Box>My docs</Box>
               </Box>
-              <Box>Logout</Box>
-            </Box>
-          </Button>
+            </Button>
+            <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+              <Box display="flex" alignItems="center">
+                <Box mx="2">
+                  <img src={Vector2} />
+                </Box>
+                <Box>Show client</Box>
+              </Box>
+            </Button>
+            <Accordion
+              defaultIndex={[0]}
+              allowMultiple
+              width="220px"
+              height="50px"
+              my="3"
+            >
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      display="flex"
+                      alignItems="center"
+                      height="30px"
+                    >
+                      <Box mx="2">
+                        <img src={money} />
+                      </Box>
+                      <Box>Sessions</Box>
+                    </Box>
+
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>Session 1</AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box display="flex" flexDirection="column" alignItems="center">
+            <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+              <Box display="flex" alignItems="center">
+                <Box mx="2">
+                  <img src={Vector3} />
+                </Box>
+                <Box>Notifications</Box>
+              </Box>
+            </Button>
+            <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+              <Box display="flex" alignItems="center">
+                <Box mx="2">
+                  <img src={Vector4} />
+                </Box>
+                <Box>Settings</Box>
+              </Box>
+            </Button>
+            <Button bgColor="#DFECFB" width="220px" height="50px" my="3">
+              <Box display="flex" alignItems="center">
+                <Box mx="2">
+                  <img src={Vector5} />
+                </Box>
+                <Box>Logout</Box>
+              </Box>
+            </Button>
+          </Box>
+          <Box>
+            <CardBox
+              title="Title"
+              text="Lorem ipsum dolor sit amet"
+              date="April 30, 2024"
+            />
+          </Box>
         </Box>
       </Box>
     </div>

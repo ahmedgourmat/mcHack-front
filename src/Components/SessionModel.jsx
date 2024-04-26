@@ -1,5 +1,6 @@
 import { Box, Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
 import React from "react"
+import { Textarea } from '@chakra-ui/react'
 
 function SessionModel({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -23,7 +24,7 @@ function SessionModel({ children }) {
             </FormControl>
 
             <FormControl mt={4}>
-              <Input placeholder="Description: Session for managing and sharing files for the developmenet of the micrp club app" size="lg" width="400px" />
+              <Textarea placeholder="Description: Session for managing and sharing files for the developmenet of the micrp club app"  />
             </FormControl>
             <FormControl mt={4}>
               <Input placeholder="Budget" />
