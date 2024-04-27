@@ -8,7 +8,6 @@ import Vector3 from "../assets/Vector3.png"
 import Vector4 from "../assets/Vector4.png"
 import Vector5 from "../assets/Vector5.png"
 import money from "../assets/money.png"
-import CardBox from "./CardBox"
 import {
   Box,
   Button,

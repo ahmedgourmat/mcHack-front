@@ -3,7 +3,7 @@ import React from "react"
 
 const CardBox = ({title, text, date}) => {
   return (
-    <div>
+    <div className="m-5 border solid">
       <Card width='350px' height='130px'>
 
         <CardBody>

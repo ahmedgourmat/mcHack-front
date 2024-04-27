@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
+import { Box, Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Textarea, useDisclosure } from "@chakra-ui/react"
 import React from "react"
 
 function SessionModel({ children }) {
@@ -23,7 +23,7 @@ function SessionModel({ children }) {
             </FormControl>
 
             <FormControl mt={4}>
-              <Input placeholder="Description: Session for managing and sharing files for the developmenet of the micrp club app" size="lg" width="400px" />
+              <Textarea placeholder="Description: Session for managing and sharing files for the developmenet of the micrp club app"/>
             </FormControl>
             <FormControl mt={4}>
               <Input placeholder="Budget" />

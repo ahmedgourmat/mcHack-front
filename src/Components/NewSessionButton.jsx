@@ -10,7 +10,9 @@ const NewSessionButton = () => {
         {" "}
         <div
           style={{
-            width: "100%",
+            width: "1200px",
+            marginTop: "30px",
+            marginRight: "40px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
