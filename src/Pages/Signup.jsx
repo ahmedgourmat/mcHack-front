@@ -1,8 +1,42 @@
 import { Box, Button, FormControl, FormLabel, Input, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import AuthSideBar from '../Components/AuthSideBar';
+import axios from 'axios';
 
 function Signup() {
+
+  const [values ,setValues] = useState({
+    name :'',
+    email : '', 
+    password : '',
+    confirmPassword : ''
+  })
+
+  const submitHandler = async()=>{
+
+
+    await axios.post('http://localhost:8080/api/user/signup' , values)
+    .then((res)=>{
+      toast.success('Welcome Again !!')
+      localStorage.setItem('user', JSON.stringify(res.data))
+      setValues({
+        name :'',
+        email : '', 
+        password : '',
+        confirmPassword : ''
+      })
+      navigate('/Home')
+    })
+    .catch((err)=>{
+      toast.error(err.response.data.error)
+    })
+
+  }
+
+  const changeHandler = (e)=>{
+    setValues({...values , [e.target.name] : e.target.value})
+  }
+
   return (
     <Box
       display='flex'
@@ -35,23 +69,19 @@ function Signup() {
         >
           <FormControl isRequired>
             <FormLabel>UserName</FormLabel>
-            <Input placeholder='UserName' />
-          </FormControl>
-          <FormControl isRequired>
-            <FormLabel>FullName</FormLabel>
-            <Input placeholder='FullName' />
+            <Input type='text' placeholder='UserName'  name='name' value={values.name} onChange={changeHandler} />
           </FormControl>
           <FormControl isRequired>
             <FormLabel>E-mail</FormLabel>
-            <Input placeholder='E-mail' />
+            <Input type='email' placeholder='E-mail' name='email' value={values.email} onChange={changeHandler}  />
           </FormControl>
           <FormControl isRequired>
             <FormLabel>Password</FormLabel>
-            <Input placeholder='Password' />
+            <Input type='password' placeholder='Password' name='password' value={values.password} onChange={changeHandler} />
           </FormControl>
           <FormControl isRequired>
             <FormLabel>Confirm password</FormLabel>
-            <Input placeholder='Confirm password' />
+            <Input type='password' placeholder='Confirm password'  name='confirmPassword' value={values.confirmPassword} onChange={changeHandler} />
           </FormControl>
           <FormControl isRequired>
             <FormLabel>Company code</FormLabel>
@@ -60,6 +90,7 @@ function Signup() {
           <Button
             colorScheme='blue'
             w='100%'
+            onClick={submitHandler}
           >Sign up</Button>
           <Text
             color='grey'

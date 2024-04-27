@@ -1,6 +1,6 @@
-import { Box, Image, Text } from '@chakra-ui/react'
+import { Box, Center, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-import logo from '../assets/logo.png'
+import logoauth from '../assets/logoauth.png'
 
 function AuthSideBar() {
   return (
@@ -16,7 +16,7 @@ function AuthSideBar() {
       pt={{base : '10px' , md : '20px' , lg:'150px'}}
       position='relative'
       overflow='hidden'
-      justifyContent={{base : 'center' , md : 'center'}}
+      justifyContent={{base : 'center' , md : 'center' , lg:'flex-start'}}
     >
 
       <Box
@@ -28,12 +28,11 @@ function AuthSideBar() {
         h='480px'
         borderRadius='120% 90% 120% 90%'
       >
-        
       </Box>
       <Image
-        width={{base : '100px' , md:'200px' , lg : '300px'}}
+        width={{base : '100px' , md:'200px' , lg : '300cd ..px'}}
         height={{base : '50px' , md:'100px' , lg : '150px'}}
-        src={logo}
+        src={logoauth}
         alt='Dan Abramov'
         zIndex='999'
       />
@@ -42,7 +41,6 @@ function AuthSideBar() {
         fontSize='1.1em'
         color='#FDFDFD'
         zIndex='999'
-
       >
         Discover the future of document management. Effortless organization, seamless collaboration
       </Text>

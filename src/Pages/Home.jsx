@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import React from "react"
 import HomeSideBar from "../Components/HomeSideBar"
 import CardBox from "../Components/CardBox"
 import ScheduleBox from "../Components/ScheduleBox"
 import NewSessionButton from "../Components/NewSessionButton"
+=======
+import { Box } from '@chakra-ui/react'
+import React from 'react'
+>>>>>>> 8eb7a6dfbeb2500a2b89a441a50b9ff9bacbdaa8
 
-const Home = () => {
+function Home() {
   return (
+<<<<<<< HEAD
     <div>
       <div className="flex">
         <div>
@@ -63,6 +69,11 @@ const Home = () => {
         </div>
       </div>
     </div>
+=======
+    <Box>
+      
+    </Box>
+>>>>>>> 8eb7a6dfbeb2500a2b89a441a50b9ff9bacbdaa8
   )
 }
 
