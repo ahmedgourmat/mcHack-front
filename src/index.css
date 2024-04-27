@@ -28,6 +28,12 @@
   background: #333; /* Color of the scrollbar on hover */
 }
 
+<<<<<<< HEAD
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> salah

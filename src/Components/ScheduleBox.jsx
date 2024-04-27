@@ -1,10 +1,10 @@
 import { Box, Card, CardBody, Heading, Text } from "@chakra-ui/react"
 import React from "react"
 
-const ScheduleBox = ({ session, title, text }) => {
+const ScheduleBox = ({ session, title, text, width }) => {
   return (
-    <div>
-      <Card width='500px' height='130px'>
+    <div className="m-5 border solid rounded-md">
+      <Card width={width} height='130px'>
         <CardBody>
           <Box>
             <Heading size="md">
