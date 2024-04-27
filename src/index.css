@@ -28,3 +28,6 @@
   background: #333; /* Color of the scrollbar on hover */
 }
   
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
